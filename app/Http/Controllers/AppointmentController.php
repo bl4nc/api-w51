@@ -13,7 +13,7 @@ class AppointmentController extends Controller
     public function insert_appointment(Request $request)
     {
 
-        if (empty($request-> name) || empty($request-> email)){
+        if (empty($request-> name) || empty($request-> email) || empty($request-> service) || empty($request-> phone_number) || empty($request-> date) || empty($request-> time) || empty($request-> your_notes)){
             return response()->json(['sucess'=>false,'msg'=>'Preencha todos os campos!']);
         }
 
