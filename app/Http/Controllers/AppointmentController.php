@@ -15,13 +15,13 @@ class AppointmentController extends Controller
         $data = $request->all();
 
         $appointment = new Appointment();
-        $appointment->setName($data['name']);
-        $appointment->setEmail($data['email']);
-        $appointment->setService($data['service']);
-        $appointment->setPhoneNumber($data['phone_number']);
-        $appointment->setDate($data['data']);
-        $appointment->setTime($data['time']);
-        $appointment->setYourNotes($data['your_notes']);
+        $appointment->name ($data['name']);
+        $appointment->email($data['email']);
+        $appointment->service($data['service']);
+        $appointment->phone_number($data['phone_number']);
+        $appointment->date($data['data']);
+        $appointment->time($data['time']);
+        $appointment->your_notes($data['your_notes']);
 
         $appointment->save();
         return $response()->json(['sucess'=>true,'msg'=>'Appointment send']);
