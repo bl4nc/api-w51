@@ -10,11 +10,11 @@ use App\Models\Appointment;
 
 class AppointmentController extends Controller
 {
-    public function insert_appointment(Request $request ,Response $response)
+    public function insert_appointment(Request $request)
     {
 
         if (empty($request-> name) || empty($request-> email)){
-            return $response()->json(['sucess'=>false,'msg'=>'Preencha todos os campos!']);
+            return response()->json(['sucess'=>false,'msg'=>'Preencha todos os campos!']);
         }
 
         $appointment = new Appointment;
@@ -27,9 +27,9 @@ class AppointmentController extends Controller
         $appointment->your_notes = ($request->your_notes ?? '-');
 
         if ($appointment->save()){
-            return $response()->json(['sucess'=>true,'msg'=>'Appointment send']);
+            return response()->json(['sucess'=>true,'msg'=>'Appointment send']);
         }else{
-            return $response()->json(['sucess'=>false,'msg'=>'Insert error']);
+            return response()->json(['sucess'=>false,'msg'=>'Insert error']);
 
         };
 
