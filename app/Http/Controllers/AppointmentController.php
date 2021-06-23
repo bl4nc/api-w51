@@ -22,8 +22,8 @@ class AppointmentController extends Controller
         $appointment->setDate($data['data']);
         $appointment->setTime($data['time']);
         $appointment->setYourNotes($data['your_notes']);
-        $appointment->save();
 
+        $appointment->save();
         return $response()->json(['sucess'=>true,'msg'=>'Appointment send']);
 
     }
