@@ -19,7 +19,7 @@ use App\Http\Controllers\AppointmentController;
 //     return view('welcome');
 // });
 
-Route::post('/appointment','App\Http\Controllers\AppointmentController@insert_appointment');
+// Route::post('/appointment','App\Http\Controllers\AppointmentController@insert_appointment');
 
 
 
