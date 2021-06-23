@@ -18,6 +18,7 @@ class CreateSendContactsTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->longText('comment');
+            $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
         });
     }

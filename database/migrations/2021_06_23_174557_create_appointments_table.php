@@ -22,6 +22,7 @@ class CreateAppointmentsTable extends Migration
             $table->date('date');
             $table->time('time');
             $table->longText('your_notes');
+            $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
         });
     }
