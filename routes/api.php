@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::post('/appointment','App\Http\Controllers\AppointmentController@insert_appointment');
+
+Route::post('/send_contact','App\Http\Controllers\SendContactController@insert_contact');
