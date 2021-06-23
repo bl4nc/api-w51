@@ -15,7 +15,10 @@ class CreateSendContactsTable extends Migration
     {
         Schema::create('send_contacts', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->longText('comment');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
