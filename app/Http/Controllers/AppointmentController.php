@@ -10,19 +10,17 @@ use App\Models\Appointment;
 
 class AppointmentController extends Controller
 {
-    public function insert_appointment(Request $request, Response $response)
+    public function insert_appointment(Request $request ,Response $response)
     {
-        $data = $request->all();
 
-        $appointment = new Appointment();
-        $appointment->name ($data['name']);
-        $appointment->email($data['email']);
-        $appointment->service($data['service']);
-        $appointment->phone_number($data['phone_number']);
-        $appointment->date($data['data']);
-        $appointment->time($data['time']);
-        $appointment->your_notes($data['your_notes']);
-
+        $appointment = new Appointment;
+        $appointment->name ($request->name);
+        $appointment->email($request->email);
+        $appointment->service($request->service);
+        $appointment->phone_number($request->phone_number);
+        $appointment->date($request->date);
+        $appointment->time($request->time);
+        $appointment->your_notes($request->your_notes);
         $appointment->save();
         return $response()->json(['sucess'=>true,'msg'=>'Appointment send']);
 
