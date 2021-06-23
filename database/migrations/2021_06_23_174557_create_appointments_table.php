@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class SendContact extends Migration
+class CreateAppointmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class SendContact extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('send_contact', function (Blueprint $table) {
+        Schema::create('appointments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->longText('comment');
+            $table->string('service');
+            $table->string('phone_number');
+            $table->date('date');
+            $table->time('time');
+            $table->longText('your_notes');
             $table->timestamp('created_at')->nullable();
         });
     }
@@ -30,6 +33,6 @@ class SendContact extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('send_contact');
+        Schema::dropIfExists('appointments');
     }
 }
