@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Appointment extends Model
 {
-    use HasFactory;
+    // use HasFactory;
 
     protected $table = 'appointment';
-    protected $fillable=['name','email','service','phone_number','date','time','your_notes'];
+    protected $fillable = ['name','email','service','phone_number','date','time','your_notes'];
 
 }
