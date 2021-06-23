@@ -15,7 +15,5 @@ class AppointmentController extends Controller
         $data = $request->all();
         print_r($data);
         $appintment = new Appointment();
-
-
     }
 }
