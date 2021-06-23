@@ -14,16 +14,20 @@ class AppointmentController extends Controller
     {
 
         $appointment = new Appointment;
-        $appointment->name = ($request->name);
-        $appointment->email = ($request->email);
-        $appointment->service = ($request->service);
-        $appointment->phone_number = ($request->phone_number);
-        $appointment->date = ($request->date);
-        $appointment->time = ($request->time);
-        $appointment->your_notes = ($request->your_notes);
+        $appointment->name = ($request->name ?? '-');
+        $appointment->email = ($request->email ?? '-');
+        $appointment->service = ($request->service ?? '-');
+        $appointment->phone_number = ($request->phone_number ?? '-');
+        $appointment->date = ($request->date ?? '-');
+        $appointment->time = ($request->time ?? '-');
+        $appointment->your_notes = ($request->your_notes ?? '-');
 
-        $appointment->save();
-        return $response()->json(['sucess'=>true,'msg'=>'Appointment send']);
+        if ($appointment->save()){
+            return $response()->json(['sucess'=>true,'msg'=>'Appointment send']);
+        }else{
+            return $response()->json(['sucess'=>false,'msg'=>'Insert error']);
+
+        };
 
     }
 }
