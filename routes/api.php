@@ -19,4 +19,4 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::post('/appointment','App\Http\Controllers\AppointmentController@insert_appointment');
 
-Route::post('/send_contact','App\Http\Controllers\SendContactController@insert_contact');
+Route::post('/send_contact','App\Http\Controllers\SendContactController@send_contact');
