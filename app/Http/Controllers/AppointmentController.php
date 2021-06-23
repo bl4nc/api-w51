@@ -12,9 +12,8 @@ class AppointmentController extends Controller
 {
     public function insert_appointment(Request $request, Response $response)
     {
-        // $data = $request->all();
-        // print_r($data);
+        $data = $request->all();
+        print_r($data);
         $appintment = new Appointment();
-        return view('welcome');
     }
 }
