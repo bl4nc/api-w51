@@ -17,8 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::post('/appointment', function () {
-    return view('welcome');
-});
+Route::post('/appointment','AppointmentController@insert_appointment');
+
 
 
