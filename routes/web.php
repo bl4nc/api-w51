@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::post('/appointment', function () {
     return view('welcome');
 });
+
+Route::get('/appointment', function () {
+    return view('welcome');
+});
+
