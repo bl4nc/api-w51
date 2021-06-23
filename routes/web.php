@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::post('/appointment', function () {
+// Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::post('/appointment', function () {
+    return view('welcome');
+});
 
 
