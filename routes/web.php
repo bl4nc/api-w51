@@ -17,11 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/appointment', function () {
-    return view('welcome');
-});
+// Route::post('/appointment', function () {
+//     return view('welcome');
+// });
 
-Route::get('/appointment', function () {
-    return view('welcome');
-});
 
